@@ -35,16 +35,8 @@ class Bike(models.Model):
         string='Last Maintenance Date'
     )
 
-    daily_rental_price = fields.Monetary(
-        string='Daily Rental Price',
-        currency_field='currency_id'
-    )
-
-    currency_id = fields.Many2one(
-        'res.currency',
-        string='Currency',
-        default=lambda self: self.env.company.currency_id,
-        required=True
+    daily_rental_price = fields.Float(
+        string='Daily Rental Price'
     )
 
     wheel_size = fields.Float(

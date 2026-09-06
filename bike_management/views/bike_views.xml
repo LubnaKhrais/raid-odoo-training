@@ -43,7 +43,6 @@
 
                     <group string="Rental Information">
                         <field name="daily_rental_price"/>
-                        <field name="currency_id"/>
                         <field name="wheel_size"/>
                     </group>
 
