@@ -23,6 +23,6 @@
         'security/ir.model.access.csv',
         'views/bike_views.xml',
     ],
-'post_init_hook': 'post_init_hook',    'application': True,
+    'application': True,
     'installable': True,
 }
