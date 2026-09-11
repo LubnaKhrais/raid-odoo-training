@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Workshop Staff Group -->
+    <record id="group_bike_workshop_staff" model="res.groups">
+        <field name="name">Bike Workshop Staff</field>
+    </record>
+
+    <!-- Assign Administrator to Workshop Staff by default -->
+    <record id="base.user_admin" model="res.users">
+        <field name="group_ids" eval="[(4, ref('bike_management.group_bike_workshop_staff'))]"/>
+    </record>
+
+</odoo>
