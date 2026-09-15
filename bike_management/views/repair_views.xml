@@ -11,7 +11,7 @@
                 <field name="bike_source"/>
                 <field name="bike_id"/>
                 <field name="mechanic_id"/>
-                <field name="service_date"/>
+		<field name="last_service_date"/>
                 <field name="total_spare_parts_cost"/>
                 <field name="state"/>
             </list>
@@ -65,7 +65,7 @@
 
                         <group>
                             <field name="mechanic_id"/>
-                            <field name="service_date"/>
+			    <field name="last_service_date"/>
                         </group>
 
                     </group>
@@ -141,6 +141,8 @@
 
     <menuitem id="menu_bike_repair_root"
               name="Repair Management"
+	      parent="bike_management.menu_bike_root"
+	      groups="bike_management.group_bike_workshop_staff"
               sequence="20"/>
 
     <menuitem id="menu_bike_repair"

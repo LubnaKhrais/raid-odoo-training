@@ -107,6 +107,8 @@
     <menuitem
         id="menu_bike_rental_root"
         name="Rental Management"
+	parent="bike_management.menu_bike_root"
+	groups="bike_management.group_bike_workshop_staff"
         sequence="15"
     />
 

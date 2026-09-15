@@ -3,6 +3,7 @@ from odoo.exceptions import UserError
 
 class RepairJob(models.Model):
     _name = 'bike.repair'
+    _inherit = ['bike.service.tracking.mixin']
     _description = 'Bike Repair Job'
     _order = 'id desc'
 
@@ -56,19 +57,6 @@ class RepairJob(models.Model):
         string='Reported Issue'
     )
 
-    mechanic_id = fields.Many2one(
-        'res.users',
-        string='Assigned Mechanic'
-    )
-
-    service_date = fields.Date(
-        string='Service Date'
-    )
-
-    service_notes = fields.Text(
-        string='Service Notes'
-    )
-
     state = fields.Selection(
         [
             ('draft', 'Draft'),
@@ -80,11 +68,6 @@ class RepairJob(models.Model):
         default='draft',
         required=True
     )
-    total_spare_parts_cost = fields.Float(
-        string='Total Spare Parts Cost',
-        compute='_compute_total_spare_parts_cost',
-        store=True
-    )
 
     spare_part_line_ids = fields.One2many(
         'bike.repair.part',
@@ -92,6 +75,13 @@ class RepairJob(models.Model):
         string='Spare Parts'
     )
 
+    total_spare_parts_cost = fields.Float(
+        string='Total Spare Parts Cost',
+        compute='_compute_total_spare_parts_cost',
+        store=True
+    )
+
+    @api.depends('spare_part_line_ids.subtotal')
     def _compute_total_spare_parts_cost(self):
         for repair in self:
             repair.total_spare_parts_cost = sum(
@@ -162,9 +152,9 @@ class RepairJob(models.Model):
                     "Service Notes are required before completing the repair."
                 )
 
-            if not repair.service_date:
+            if not repair.last_service_date:
                 raise UserError(
-                    "Service Date is required before completing the repair."
+                    "Last Service Date is required before completing the repair."
                 )
 
             repair.state = 'completed'
