@@ -3,6 +3,7 @@ from odoo import models, fields
 
 class Bike(models.Model):
     _name = 'bike.management.bike'
+    _inherit = ['bike.service.tracking.mixin']
     _description = 'Bike'
     _rec_name = 'name'
 
@@ -42,3 +43,27 @@ class Bike(models.Model):
     wheel_size = fields.Float(
         string='Wheel Size (inches)'
     )
+    rental_count = fields.Integer(
+    	string='Rentals',
+    	compute='_compute_rental_count'
+    )
+
+    def _compute_rental_count(self):
+        for bike in self:
+            bike.rental_count = self.env['bike.rental'].search_count([
+                ('bike_id', '=', bike.id)
+            ])
+
+    def action_view_rentals(self):
+        self.ensure_one()
+
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Rental History',
+            'res_model': 'bike.rental',
+            'view_mode': 'list,form',
+            'domain': [('bike_id', '=', self.id)],
+            'context': {
+                'default_bike_id': self.id,
+            },
+        }

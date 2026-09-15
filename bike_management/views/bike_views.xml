@@ -28,6 +28,23 @@
             <form string="Bike">
                 <sheet>
 
+			<div class="oe_button_box" name="button_box">
+
+			    <button
+			        name="action_view_rentals"
+			        type="object"
+			        class="oe_stat_button"
+			        icon="fa-calendar"
+			    >
+			        <field
+			            name="rental_count"
+			            widget="statinfo"
+			            string="Rentals"
+			        />
+			    </button>
+
+			</div>
+
                     <group>
                         <group>
                             <field name="name"/>
@@ -40,7 +57,11 @@
                             <field name="last_maintenance_date"/>
                         </group>
                     </group>
-
+			<group string="Service Information">
+			    <field name="mechanic_id"/>
+			    <field name="last_service_date"/>
+			    <field name="service_notes"/>
+			</group>
                     <group string="Rental Information">
                         <field name="daily_rental_price"/>
                         <field name="wheel_size"/>
