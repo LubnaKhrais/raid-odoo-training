@@ -5,3 +5,4 @@ from . import repair
 from . import repair_part
 from . import partner
 from . import product
+from . import dashboard

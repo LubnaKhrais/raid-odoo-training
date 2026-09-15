@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <!-- Rental Agreement Report Action -->
+    <record id="action_report_bike_rental_agreement"
+            model="ir.actions.report">
+
+        <field name="name">Rental Agreement</field>
+        <field name="model">bike.rental</field>
+        <field name="report_type">qweb-pdf</field>
+	<field name="report_name">bike_management.report_rental_agreement</field>
+	<field name="report_file">bike_management.report_rental_agreement</field>
+        <field name="binding_model_id"
+               ref="model_bike_rental"/>
+        <field name="binding_type">report</field>
+        <field name="print_report_name">
+            'Rental Agreement - %s' % (object.name)
+        </field>
+
+    </record>
+
+
+    <!-- Rental Agreement QWeb Template -->
+    <template id="report_rental_agreement">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="rental">
+
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <!-- Header -->
+                        <div class="text-center">
+                            <h2>Rental Agreement</h2>
+                            <p>
+                                <strong>Rental Reference:</strong>
+                                <span t-field="rental.name"/>
+                            </p>
+                        </div>
+
+                        <hr/>
+
+                        <!-- Rental Status -->
+                        <h4>Rental Information</h4>
+
+                        <table class="table table-sm">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <strong>Status</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.state"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Rental Start Date</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.start_date"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Expected Return Date</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.expected_return_date"/>
+                                    </td>
+                                </tr>
+
+                                <tr t-if="rental.actual_return_date">
+                                    <td>
+                                        <strong>Actual Return Date</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.actual_return_date"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Rental Duration</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.rental_duration"/>
+                                        day(s)
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Daily Rental Price</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.daily_price"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>Total Rental Amount</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.total_amount"/>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <!-- Customer Information -->
+                        <h4>Customer Information</h4>
+
+                        <table class="table table-sm">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <strong>Customer</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.customer_id.name"/>
+                                    </td>
+                                </tr>
+
+                                <tr t-if="rental.customer_id.phone">
+                                    <td>
+                                        <strong>Phone</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.customer_id.phone"/>
+                                    </td>
+                                </tr>
+
+                                <tr t-if="rental.customer_id.email">
+                                    <td>
+                                        <strong>Email</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.customer_id.email"/>
+                                    </td>
+                                </tr>
+
+                                <tr t-if="rental.customer_id.street">
+                                    <td>
+                                        <strong>Address</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.customer_id.street"/>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <!-- Bike Information -->
+                        <h4>Bike Information</h4>
+
+                        <table class="table table-sm">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <strong>Bike</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.bike_id.name"/>
+                                    </td>
+                                </tr>
+
+                                <tr t-if="rental.bike_id.brand">
+                                    <td>
+                                        <strong>Brand</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.bike_id.brand"/>
+                                    </td>
+                                </tr>
+
+                                <tr t-if="rental.bike_id.bike_type">
+                                    <td>
+                                        <strong>Bike Type</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="rental.bike_id.bike_type"/>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <!-- Agreement Note -->
+                        <div class="mt-4">
+                            <p>
+                                This document serves as the rental agreement
+                                for the bike rental described above.
+                            </p>
+                        </div>
+
+                        <br/>
+
+                        <!-- Signatures -->
+                        <div class="row mt-5">
+
+                            <div class="col-6 text-center">
+                                <strong>Customer Signature</strong>
+                                <br/>
+                                <br/>
+                                __________________________
+                            </div>
+
+                            <div class="col-6 text-center">
+                                <strong>Workshop Representative</strong>
+                                <br/>
+                                <br/>
+                                __________________________
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>

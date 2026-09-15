@@ -3,3 +3,4 @@ access_bike_workshop_staff,bike.management.bike.staff,model_bike_management_bike
 access_bike_rental_staff,bike.rental.staff,model_bike_rental,group_bike_workshop_staff,1,1,1,1
 access_bike_repair_staff,bike.repair.staff,model_bike_repair,group_bike_workshop_staff,1,1,1,1
 access_bike_repair_part_staff,bike.repair.part.staff,model_bike_repair_part,group_bike_workshop_staff,1,1,1,1
+access_bike_workshop_dashboard,bike.workshop.dashboard,model_bike_workshop_dashboard,bike_management.group_bike_workshop_staff,1,1,1,1
