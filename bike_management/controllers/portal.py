@@ -11,9 +11,9 @@ class BikeRentalPortal(CustomerPortal):
         if 'rental_count' in counters:
             partner = request.env.user.partner_id
 
-            rentals = request.env['bike.rental'].sudo().search([]).filtered(
-                lambda rental: rental.customer_id.id == partner.id
-            )
+            rentals = request.env['bike.rental'].search([
+                ('customer_id', '=', partner.id)
+            ])
 
             values['rental_count'] = len(rentals)
 
@@ -32,10 +32,9 @@ class BikeRentalPortalController(http.Controller):
 
         partner = request.env.user.partner_id
 
-        # Get rentals belonging ONLY to the logged-in user's Contact.
-        rentals = request.env['bike.rental'].sudo().search([]).filtered(
-            lambda rental: rental.customer_id.id == partner.id
-        )
+        rentals = request.env['bike.rental'].search([
+            ('customer_id', '=', partner.id)
+        ], order='start_date desc, id desc')
 
         values = {
             'rentals': rentals,
@@ -55,12 +54,9 @@ class BikeRentalPortalController(http.Controller):
     )
     def portal_rental_detail(self, rental_id, **kwargs):
 
-        partner = request.env.user.partner_id
+        rental = request.env['bike.rental'].browse(rental_id)
 
-        rental = request.env['bike.rental'].sudo().browse(rental_id)
-
-        # Rental must belong to the logged-in user's Contact.
-        if not rental.exists() or rental.customer_id.id != partner.id:
+        if not rental.exists():
             return request.not_found()
 
         values = {

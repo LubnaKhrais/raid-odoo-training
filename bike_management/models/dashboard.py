@@ -27,7 +27,6 @@ class BikeWorkshopDashboard(models.TransientModel):
         repair_model = self.env['bike.repair']
 
         for dashboard in self:
-
             dashboard.active_rentals_today = rental_model.search_count([
                 ('state', '=', 'confirmed'),
                 ('start_date', '<=', today),
@@ -42,6 +41,35 @@ class BikeWorkshopDashboard(models.TransientModel):
             dashboard.repairs_in_progress = repair_model.search_count([
                 ('state', '=', 'in_progress'),
             ])
+
+    def action_open_dashboard(self):
+        """Open one fixed dashboard record."""
+        dashboard = self.search([], limit=1)
+
+        if not dashboard:
+            dashboard = self.create({})
+
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Workshop Operations Dashboard',
+            'res_model': 'bike.workshop.dashboard',
+            'view_mode': 'form',
+            'views': [
+                (
+                    self.env.ref(
+                        'bike_management.view_bike_workshop_dashboard_form'
+                    ).id,
+                    'form',
+                ),
+            ],
+            'res_id': dashboard.id,
+            'target': 'current',
+            'context': {
+                'create': False,
+                'edit': False,
+                'delete': False,
+            },
+        }
 
     def action_view_active_rentals(self):
         self.ensure_one()
