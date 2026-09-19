@@ -26,6 +26,7 @@
 	'views/partner_views.xml',
 	'data.xml',
 	'views/product_views.xml',
+	'views/rental_analysis_views.xml',
 	'views/rental_views.xml',
     ],
     'application': True,

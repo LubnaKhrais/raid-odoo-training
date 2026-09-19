@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Rental Analysis Search -->
+    <record id="view_bike_rental_analysis_search" model="ir.ui.view">
+        <field name="name">bike.rental.analysis.search</field>
+        <field name="model">bike.rental</field>
+        <field name="arch" type="xml">
+            <search string="Rental Analysis">
+
+                <field name="customer_id"/>
+                <field name="bike_id"/>
+                <field name="bike_type"/>
+                <field name="start_date"/>
+                <field name="state"/>
+                <field name="return_performance"/>
+
+                <!-- Default: Confirmed + Returned -->
+                <filter
+                    name="confirmed_returned"
+                    string="Confirmed and Returned"
+                    domain="[('state', 'in', ['confirmed', 'returned'])]"
+                />
+
+                <filter
+                    name="filter_confirmed"
+                    string="Confirmed"
+                    domain="[('state', '=', 'confirmed')]"
+                />
+
+                <filter
+                    name="filter_returned"
+                    string="Returned"
+                    domain="[('state', '=', 'returned')]"
+                />
+
+                <filter
+                    name="filter_on_time"
+                    string="On Time"
+                    domain="[('return_performance', '=', 'on_time')]"
+                />
+
+                <filter
+                    name="filter_late"
+                    string="Late"
+                    domain="[('return_performance', '=', 'late')]"
+                />
+
+                <filter
+                    name="filter_pending"
+                    string="Pending"
+                    domain="[('return_performance', '=', 'pending')]"
+                />
+
+                <separator/>
+
+                <!-- Group By -->
+                <group>
+                    <filter
+                        name="group_by_month"
+                        string="Rental Month"
+                        context="{'group_by': 'start_date:month'}"
+                    />
+
+                    <filter
+                        name="group_by_bike_type"
+                        string="Bike Type"
+                        context="{'group_by': 'bike_type'}"
+                    />
+
+                    <filter
+                        name="group_by_status"
+                        string="Rental Status"
+                        context="{'group_by': 'state'}"
+                    />
+
+                    <filter
+                        name="group_by_customer"
+                        string="Customer"
+                        context="{'group_by': 'customer_id'}"
+                    />
+
+                    <filter
+                        name="group_by_return_performance"
+                        string="Return Performance"
+                        context="{'group_by': 'return_performance'}"
+                    />
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+
+    <!-- Rental Analysis Pivot -->
+    <record id="view_bike_rental_analysis_pivot" model="ir.ui.view">
+        <field name="name">bike.rental.analysis.pivot</field>
+        <field name="model">bike.rental</field>
+        <field name="arch" type="xml">
+            <pivot string="Rental Analysis" disable_linking="1">
+
+                <field
+                    name="start_date"
+                    type="row"
+                    interval="month"
+                />
+
+                <field
+                    name="bike_type"
+                    type="row"
+                />
+
+                <field
+                    name="state"
+                    type="row"
+                />
+
+                <field
+                    name="total_amount"
+                    type="measure"
+                />
+
+                <field
+                    name="rental_duration"
+                    type="measure"
+                    operator="avg"
+                />
+
+                <field
+                    name="rental_count"
+                    type="measure"
+                    operator="sum"
+                />
+
+            </pivot>
+        </field>
+    </record>
+
+
+    <!-- Rental Analysis Graph -->
+    <record id="view_bike_rental_analysis_graph" model="ir.ui.view">
+        <field name="name">bike.rental.analysis.graph</field>
+        <field name="model">bike.rental</field>
+        <field name="arch" type="xml">
+
+            <graph string="Rental Analysis" type="bar">
+
+                <field
+                    name="start_date"
+                    interval="month"
+                />
+
+                <field
+                    name="total_amount"
+                    type="measure"
+                />
+
+                <field
+                    name="rental_duration"
+                    type="measure"
+                    operator="avg"
+                />
+
+            </graph>
+
+        </field>
+    </record>
+
+
+    <!-- Rental Analysis Action -->
+    <record id="action_bike_rental_analysis" model="ir.actions.act_window">
+
+        <field name="name">Rental Analysis</field>
+
+        <field name="res_model">bike.rental</field>
+
+        <field name="view_mode">pivot,graph</field>
+
+        <field name="domain">
+            [('state', 'in', ['confirmed', 'returned'])]
+        </field>
+
+        <field name="context">
+            {
+                'search_default_confirmed_returned': 1
+            }
+        </field>
+
+    </record>
+
+
+    <!-- Rental Analysis Menu -->
+    <menuitem
+        id="menu_bike_rental_analysis"
+        name="Rental Analysis"
+        parent="menu_bike_rental_root"
+        action="action_bike_rental_analysis"
+        sequence="30"
+        groups="bike_management.group_bike_workshop_staff"
+    />
+
+</odoo>
