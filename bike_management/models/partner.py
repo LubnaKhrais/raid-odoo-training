@@ -13,3 +13,10 @@ class ResPartner(models.Model):
         ],
         string='Preferred Bike Type'
     )
+
+    rental_ids = fields.One2many(
+        'bike.rental',
+        'customer_id',
+        string='Rental History',
+        readonly=True,
+    )

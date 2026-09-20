@@ -1,0 +1,864 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bike_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-20 11:17+0000\n"
+"PO-Revision-Date: 2026-09-20 11:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bike_management
+#: model:ir.actions.report,print_report_name:bike_management.action_report_bike_rental_agreement
+msgid ""
+"\n"
+"            'Rental Agreement - %s' % (object.name)\n"
+"        "
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Actual Return Date:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Actual Return Date</strong>"
+msgstr "<strong>تاريخ الإرجاع الفعلي</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Address</strong>"
+msgstr "<strong>العنوان</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Bike Type</strong>"
+msgstr "<strong>نوع الدراجة</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Bike:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Bike</strong>"
+msgstr "<strong>الدراجة</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Brand</strong>"
+msgstr "<strong>العلامة التجارية</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid ""
+"<strong>Customer Signature</strong>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                __________________________"
+msgstr ""
+"<strong>توقيع العميل</strong>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                __________________________"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Customer</strong>"
+msgstr "<strong>العميل</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Daily Rental Price:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Daily Rental Price</strong>"
+msgstr "<strong>سعر التأجير اليومي</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Email</strong>"
+msgstr "<strong>البريد الإلكتروني</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Expected Return Date:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Expected Return Date</strong>"
+msgstr "<strong>تاريخ الإرجاع المتوقع</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Phone</strong>"
+msgstr "<strong>الهاتف</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Rental Duration:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Rental Duration</strong>"
+msgstr "<strong>مدة التأجير</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Rental Reference:</strong>"
+msgstr "<strong>مرجع التأجير:</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Rental Start Date</strong>"
+msgstr "<strong>تاريخ بدء التأجير</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Start Date:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Status:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Status</strong>"
+msgstr "<strong>الحالة</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "<strong>Total Amount:</strong>"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "<strong>Total Rental Amount</strong>"
+msgstr "<strong>إجمالي مبلغ التأجير</strong>"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid ""
+"<strong>Workshop Representative</strong>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                __________________________"
+msgstr ""
+"<strong>ممثل الورشة</strong>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                __________________________"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__active_rentals_today
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "Active Rentals Today"
+msgstr "عمليات التأجير النشطة اليوم"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__actual_return_date
+msgid "Actual Return Date"
+msgstr "تاريخ الإرجاع الفعلي"
+
+#. module: bike_management
+#: model:ir.actions.act_window,name:bike_management.action_all_bike_rentals
+#: model:ir.ui.menu,name:bike_management.menu_all_bike_rentals
+msgid "All Rentals"
+msgstr "جميع عمليات التأجير"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__mechanic_id
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__mechanic_id
+#: model:ir.model.fields,field_description:bike_management.field_bike_service_tracking_mixin__mechanic_id
+msgid "Assigned Mechanic"
+msgstr "الميكانيكي المعيّن"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+msgid "Back to My Rentals"
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_bike_management_bike
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__bike_id
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_form
+msgid "Bike"
+msgstr "الدراجات"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "Bike Information"
+msgstr "معلومات الدراجة"
+
+#. module: bike_management
+#: model:ir.ui.menu,name:bike_management.menu_bike_root
+msgid "Bike Management"
+msgstr "إدارة الدراجات"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__name
+msgid "Bike Name / Code"
+msgstr "اسم الدراجة / الرمز"
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_bike_rental
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_form
+msgid "Bike Rental"
+msgstr "تأجير الدراجة"
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_bike_repair
+msgid "Bike Repair Job"
+msgstr "مهمة إصلاح الدراجة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__bike_source
+msgid "Bike Source"
+msgstr "مصدر الدراجة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__bike_type
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__bike_type
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Bike Type"
+msgstr "نوع الدراجة"
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_bike_workshop_dashboard
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "Bike Workshop Operations Dashboard"
+msgstr "لوحة عمليات ورشة الدراجات"
+
+#. module: bike_management
+#: model:res.groups,name:bike_management.group_bike_workshop_staff
+msgid "Bike Workshop Staff"
+msgstr "موظفو ورشة الدراجات"
+
+#. module: bike_management
+#: model:ir.actions.act_window,name:bike_management.action_bike_management_bike
+#: model:ir.ui.menu,name:bike_management.menu_bike_management_bikes
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_list
+msgid "Bikes"
+msgstr "الدراجات"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__brand
+msgid "Brand"
+msgstr "العلامة التجارية"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__state__cancelled
+msgid "Cancelled"
+msgstr "ملغاة"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_management_bike__bike_type__city
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__external_bike_type__city
+#: model:ir.model.fields.selection,name:bike_management.selection__res_partner__preferred_bike_type__city
+msgid "City"
+msgstr "مدينة"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "Complete"
+msgstr "إكمال"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__state__completed
+msgid "Completed"
+msgstr "مكتملة"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__state__confirmed
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Confirmed"
+msgstr "مؤكدة"
+
+#. module: bike_management
+#: model:ir.actions.act_window,name:bike_management.action_confirmed_bike_rentals
+#: model:ir.ui.menu,name:bike_management.menu_confirmed_bike_rentals
+msgid "Confirmed Rentals"
+msgstr "عمليات التأجير المؤكدة"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Confirmed and Returned"
+msgstr "مؤكدة ومرتجعة"
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__create_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__create_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__create_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__create_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__create_uid
+msgid "Created by"
+msgstr "أنشأه"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__create_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__create_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__create_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__create_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__customer_id
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__customer_id
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Customer"
+msgstr "العميل"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "Customer Information"
+msgstr "معلومات العميل"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__daily_price
+msgid "Daily Price"
+msgstr "السعر اليومي"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__daily_rental_price
+msgid "Daily Rental Price"
+msgstr "سعر التأجير اليومي"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "Daily rental price cannot be negative."
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__display_name
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__display_name
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__display_name
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__display_name
+#: model:ir.model.fields,field_description:bike_management.field_bike_service_tracking_mixin__display_name
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__display_name
+#: model:ir.model.fields,field_description:bike_management.field_product_template__display_name
+#: model:ir.model.fields,field_description:bike_management.field_res_partner__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__state__draft
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_management_bike__bike_type__electric
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__external_bike_type__electric
+#: model:ir.model.fields.selection,name:bike_management.selection__res_partner__preferred_bike_type__electric
+msgid "Electric"
+msgstr "كهربائية"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+msgid "Expected Return"
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__expected_return_date
+msgid "Expected Return Date"
+msgstr "تاريخ الإرجاع المتوقع"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__bike_source__external
+msgid "External Bike"
+msgstr "دراجة خارجية"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__external_bike_brand
+msgid "External Bike Brand"
+msgstr "العلامة التجارية للدراجة الخارجية"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "External Bike Information"
+msgstr "معلومات الدراجة الخارجية"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__external_bike_reference
+msgid "External Bike Reference"
+msgstr "مرجع الدراجة الخارجية"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__external_bike_type
+msgid "External Bike Type"
+msgstr "نوع الدراجة الخارجية"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__id
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__id
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__id
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__id
+#: model:ir.model.fields,field_description:bike_management.field_bike_service_tracking_mixin__id
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__id
+#: model:ir.model.fields,field_description:bike_management.field_product_template__id
+#: model:ir.model.fields,field_description:bike_management.field_res_partner__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__state__in_progress
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "Invalid Return Date"
+msgstr "تاريخ إرجاع غير صالح"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_product_product__is_spare_part
+#: model:ir.model.fields,field_description:bike_management.field_product_template__is_spare_part
+msgid "Is Spare Part"
+msgstr "قطعة غيار"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__last_maintenance_date
+msgid "Last Maintenance Date"
+msgstr "تاريخ آخر صيانة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__last_service_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__last_service_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_service_tracking_mixin__last_service_date
+msgid "Last Service Date"
+msgstr "تاريخ آخر خدمة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__write_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__write_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__write_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__write_uid
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__write_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__write_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__write_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__write_date
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__return_performance__late
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Late"
+msgstr "متأخر"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_management_bike__bike_type__mountain
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__external_bike_type__mountain
+#: model:ir.model.fields.selection,name:bike_management.selection__res_partner__preferred_bike_type__mountain
+msgid "Mountain"
+msgstr "جبلية"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_home_rentals
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+msgid "My Rentals"
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__return_performance__on_time
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "On Time"
+msgstr "في الموعد"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "Only confirmed rentals can be returned."
+msgstr ""
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "Only draft rentals can be confirmed."
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__return_performance__pending
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Pending"
+msgstr "معلّق"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "Please select a bike before confirming the rental."
+msgstr ""
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "Please set the rental start date and expected return date."
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_res_partner__preferred_bike_type
+#: model:ir.model.fields,field_description:bike_management.field_res_users__preferred_bike_type
+msgid "Preferred Bike Type"
+msgstr "نوع الدراجة المفضل"
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_product_template
+msgid "Product"
+msgstr "المنتج"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__purchase_date
+msgid "Purchase Date"
+msgstr "تاريخ الشراء"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+msgid "Reference"
+msgstr ""
+
+#. module: bike_management
+#: model:ir.actions.report,name:bike_management.action_report_bike_rental_agreement
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "Rental Agreement"
+msgstr "اتفاقية التأجير"
+
+#. module: bike_management
+#: model:ir.actions.act_window,name:bike_management.action_bike_rental_analysis
+#: model:ir.ui.menu,name:bike_management.menu_bike_rental_analysis
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_graph
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_pivot
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Rental Analysis"
+msgstr "تحليل التأجير"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_form
+msgid "Rental Calculation"
+msgstr "حساب التأجير"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__rental_count
+msgid "Rental Count"
+msgstr "عدد عمليات التأجير"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__rental_duration
+msgid "Rental Duration"
+msgstr "مدة التأجير"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+#: model:ir.model.fields,field_description:bike_management.field_res_partner__rental_ids
+#: model:ir.model.fields,field_description:bike_management.field_res_users__rental_ids
+#: model_terms:ir.ui.view,arch_db:bike_management.view_partner_form_bike_management
+msgid "Rental History"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "Rental Information"
+msgstr "معلومات التأجير"
+
+#. module: bike_management
+#: model:ir.ui.menu,name:bike_management.menu_bike_rental_root
+msgid "Rental Management"
+msgstr "إدارة التأجير"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Rental Month"
+msgstr "شهر التأجير"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__name
+msgid "Rental Reference"
+msgstr "مرجع التأجير"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Rental Status"
+msgstr "حالة التأجير"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "Rental duration cannot be negative."
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__rental_count
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_form
+msgid "Rentals"
+msgstr "عمليات التأجير"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "Repair Details"
+msgstr "تفاصيل الإصلاح"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__repair_id
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "Repair Job"
+msgstr "مهمة الإصلاح"
+
+#. module: bike_management
+#: model:ir.actions.act_window,name:bike_management.action_bike_repair
+#: model:ir.ui.menu,name:bike_management.menu_bike_repair
+msgid "Repair Jobs"
+msgstr "مهام الإصلاح"
+
+#. module: bike_management
+#: model:ir.ui.menu,name:bike_management.menu_bike_repair_root
+msgid "Repair Management"
+msgstr "إدارة الإصلاحات"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__name
+msgid "Repair Reference"
+msgstr "مرجع الإصلاح"
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_bike_repair_part
+msgid "Repair Spare Part"
+msgstr "قطعة غيار للإصلاح"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__repairs_in_progress
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "Repairs In Progress"
+msgstr "الإصلاحات قيد التنفيذ"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__reported_issue
+msgid "Reported Issue"
+msgstr "المشكلة المبلّغ عنها"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_form
+msgid "Return"
+msgstr "إرجاع"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__return_performance
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Return Performance"
+msgstr "أداء الإرجاع"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__state__returned
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_rental_analysis_search
+msgid "Returned"
+msgstr "مرتجعة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_workshop_dashboard__returns_due_today
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "Returns Due Today"
+msgstr "عمليات الإرجاع المستحقة اليوم"
+
+#. module: bike_management
+#: model:ir.model,name:bike_management.model_bike_service_tracking_mixin
+msgid "Reusable Service Tracking"
+msgstr "تتبع الخدمة القابل لإعادة الاستخدام"
+
+#. module: bike_management
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_management_bike__bike_type__road
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__external_bike_type__road
+#: model:ir.model.fields.selection,name:bike_management.selection__res_partner__preferred_bike_type__road
+msgid "Road"
+msgstr "طريق"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "Service Information"
+msgstr "معلومات الخدمة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__service_notes
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__service_notes
+#: model:ir.model.fields,field_description:bike_management.field_bike_service_tracking_mixin__service_notes
+msgid "Service Notes"
+msgstr "ملاحظات الخدمة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__product_id
+msgid "Spare Part"
+msgstr "قطعة غيار"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__spare_part_line_ids
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "Spare Parts"
+msgstr "قطع الغيار"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__start_date
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_repair_form
+msgid "Start Repair"
+msgstr "بدء الإصلاح"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__state
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__state
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+msgid "Status"
+msgstr "الحالة"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__subtotal
+msgid "Subtotal"
+msgstr "المجموع الفرعي"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "The expected return date cannot be before the rental start date."
+msgstr "لا يمكن أن يكون تاريخ الإرجاع المتوقع قبل تاريخ بدء التأجير."
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "This bike already has an overlapping rental."
+msgstr "لدى هذه الدراجة عملية تأجير متداخلة بالفعل."
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "This bike currently has a repair in progress and cannot be rented."
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid ""
+"This document serves as the rental agreement\n"
+"                                for the bike rental described above."
+msgstr "يُعد هذا المستند اتفاقية التأجير للدراجة الموضحة أعلاه."
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_rental__total_amount
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+msgid "Total Amount"
+msgstr "المبلغ الإجمالي"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__total_spare_parts_cost
+msgid "Total Spare Parts Cost"
+msgstr "إجمالي تكلفة قطع الغيار"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair_part__unit_price
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "View Rentals"
+msgstr "عرض عمليات التأجير"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "View Repairs"
+msgstr "عرض الإصلاحات"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "View Returns"
+msgstr "عرض عمليات الإرجاع"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_home_rentals
+msgid "View your bike rentals"
+msgstr ""
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__wheel_size
+msgid "Wheel Size (inches)"
+msgstr "حجم العجلة (بوصة)"
+
+#. module: bike_management
+#: model:ir.model.fields,field_description:bike_management.field_bike_repair__bike_id
+#: model:ir.model.fields.selection,name:bike_management.selection__bike_repair__bike_source__workshop
+msgid "Workshop Bike"
+msgstr "دراجة الورشة"
+
+#. module: bike_management
+#: model:ir.ui.menu,name:bike_management.menu_bike_workshop_dashboard
+#: model_terms:ir.ui.view,arch_db:bike_management.view_bike_workshop_dashboard_form
+msgid "Workshop Dashboard"
+msgstr "لوحة تحكم الورشة"
+
+#. module: bike_management
+#: model:ir.actions.server,name:bike_management.action_bike_workshop_dashboard_server
+msgid "Workshop Operations Dashboard"
+msgstr "لوحة عمليات الورشة"
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
+msgid "You have no rentals."
+msgstr ""
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "bike_id"
+msgstr ""
+
+#. module: bike_management
+#: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
+#: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
+msgid "day(s)"
+msgstr "يوم/أيام"
