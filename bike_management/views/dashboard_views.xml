@@ -7,33 +7,53 @@
 
         <field name="arch" type="xml">
             <form string="Workshop Dashboard">
-		<field name="name" invisible="1"/>
+
+                <field name="name" invisible="1"/>
 
                 <sheet>
 
-                    <div class="oe_title"
-                         style="direction: rtl; text-align: right;">
+                    <!-- Workshop Logo -->
+                    <div class="bike-dashboard-header">
+                        <img
+                            src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                            alt="Rami's Bike Workshop"
+                            class="bike-dashboard-logo"
+                        />
+                    </div>
+
+                    <!-- Dashboard Title -->
+                    <div
+                        class="bike-dashboard-title oe_title"
+                        style="direction: rtl; text-align: right;"
+                    >
                         <h1>
                             Bike Workshop Operations Dashboard
                         </h1>
                     </div>
 
-                    <div class="row mt16"
-                         style="direction: rtl;">
+                    <!-- Dashboard Cards -->
+                    <div
+                        class="row mt16"
+                        style="direction: rtl;"
+                    >
 
                         <!-- Active Rentals -->
                         <div class="col-4">
-                            <div class="card text-center"
-                                 style="direction: rtl;">
+                            <div
+                                class="card text-center bike-dashboard-card"
+                                style="direction: rtl;"
+                            >
                                 <div class="card-body">
 
                                     <h3>
                                         Active Rentals Today
                                     </h3>
 
-                                    <field name="active_rentals_today"
-                                           nolabel="1"
-                                           class="display-4"/>
+                                    <field
+                                        name="active_rentals_today"
+                                        nolabel="1"
+                                        class="display-4"
+                                    />
 
                                     <br/>
 
@@ -41,7 +61,8 @@
                                         name="action_view_active_rentals"
                                         type="object"
                                         string="View Rentals"
-                                        class="btn btn-primary mt8"/>
+                                        class="btn btn-primary mt8"
+                                    />
 
                                 </div>
                             </div>
@@ -49,17 +70,21 @@
 
                         <!-- Returns Due -->
                         <div class="col-4">
-                            <div class="card text-center"
-                                 style="direction: rtl;">
+                            <div
+                                class="card text-center bike-dashboard-card"
+                                style="direction: rtl;"
+                            >
                                 <div class="card-body">
 
                                     <h3>
                                         Returns Due Today
                                     </h3>
 
-                                    <field name="returns_due_today"
-                                           nolabel="1"
-                                           class="display-4"/>
+                                    <field
+                                        name="returns_due_today"
+                                        nolabel="1"
+                                        class="display-4"
+                                    />
 
                                     <br/>
 
@@ -67,7 +92,8 @@
                                         name="action_view_returns_due"
                                         type="object"
                                         string="View Returns"
-                                        class="btn btn-primary mt8"/>
+                                        class="btn btn-primary mt8"
+                                    />
 
                                 </div>
                             </div>
@@ -75,17 +101,21 @@
 
                         <!-- Repairs -->
                         <div class="col-4">
-                            <div class="card text-center"
-                                 style="direction: rtl;">
+                            <div
+                                class="card text-center bike-dashboard-card"
+                                style="direction: rtl;"
+                            >
                                 <div class="card-body">
 
                                     <h3>
                                         Repairs In Progress
                                     </h3>
 
-                                    <field name="repairs_in_progress"
-                                           nolabel="1"
-                                           class="display-4"/>
+                                    <field
+                                        name="repairs_in_progress"
+                                        nolabel="1"
+                                        class="display-4"
+                                    />
 
                                     <br/>
 
@@ -93,7 +123,8 @@
                                         name="action_view_repairs_in_progress"
                                         type="object"
                                         string="View Repairs"
-                                        class="btn btn-primary mt8"/>
+                                        class="btn btn-primary mt8"
+                                    />
 
                                 </div>
                             </div>
@@ -108,15 +139,19 @@
     </record>
 
 
-    <record id="action_bike_workshop_dashboard_server"
-            model="ir.actions.server">
+    <record
+        id="action_bike_workshop_dashboard_server"
+        model="ir.actions.server"
+    >
 
         <field name="name">
             Workshop Operations Dashboard
         </field>
 
-        <field name="model_id"
-               ref="model_bike_workshop_dashboard"/>
+        <field
+            name="model_id"
+            ref="model_bike_workshop_dashboard"
+        />
 
         <field name="state">code</field>
 
@@ -131,6 +166,7 @@
         id="menu_bike_workshop_dashboard"
         name="Workshop Dashboard"
         parent="menu_bike_root"
-        action="action_bike_workshop_dashboard_server"/>
+        action="action_bike_workshop_dashboard_server"
+    />
 
 </odoo>

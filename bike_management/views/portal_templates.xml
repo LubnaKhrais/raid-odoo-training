@@ -2,55 +2,89 @@
 
 <odoo>
 
-    <!-- My Rentals entry on Portal home -->
+    <!-- =====================================================
+         My Rentals entry on Portal home
+         ===================================================== -->
 
-	<template id="portal_my_home_rentals"
-        	  inherit_id="portal.portal_my_home">
+    <template
+        id="portal_my_home_rentals"
+        inherit_id="portal.portal_my_home"
+    >
 
-	    <xpath expr="//div[contains(@class, 'o_portal_docs')]" position="inside">
+        <xpath
+            expr="//div[contains(@class, 'o_portal_docs')]"
+            position="inside"
+        >
 
-	        <div class="o_portal_docs_entry col-12 col-md-6 col-lg-4 mb-3">
+            <div class="o_portal_docs_entry col-12 col-md-6 col-lg-4 mb-3">
 
-	            <a href="/my/rentals" class="text-decoration-none">
+                <a
+                    href="/my/rentals"
+                    class="text-decoration-none"
+                >
 
-	                <div class="card h-100">
+                    <div class="card h-100 bike-portal-card">
 
-	                    <div class="card-body">
+                        <div class="card-body">
 
-	                        <h5 class="card-title">
-	                            My Rentals
-	                        </h5>
+                            <div class="text-center mb-3">
+                                <img
+                                    src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                                    alt="Rami's Bike Workshop"
+                                    class="bike-portal-logo"
+                                />
+                            </div>
 
-	                        <p class="card-text">
-	                            View your bike rentals
-	                        </p>
+                            <h5 class="card-title">
+                                My Rentals
+                            </h5>
 
-	                        <span class="badge bg-primary">
-	                            <t t-esc="rental_count"/>
-	                        </span>
+                            <p class="card-text">
+                                View your bike rentals
+                            </p>
 
-	                    </div>
+                            <span class="badge bg-primary">
+                                <t t-esc="rental_count"/>
+                            </span>
 
-	                </div>
+                        </div>
 
-	            </a>
+                    </div>
 
-	        </div>
+                </a>
 
-	    </xpath>
+            </div>
 
-	</template>
+        </xpath>
 
-    <!-- Rental list -->
+    </template>
 
-    <template id="portal_my_rentals"
-              name="My Rentals">
+
+    <!-- =====================================================
+         Rental List
+         ===================================================== -->
+
+    <template
+        id="portal_my_rentals"
+        name="My Rentals"
+    >
 
         <t t-call="portal.portal_layout">
 
             <div class="container">
 
-                <h3 class="mt-4 mb-4">
+                <!-- Branding -->
+                <div class="bike-portal-brand text-center mt-4">
+
+                    <img
+                        src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                        alt="Rami's Bike Workshop"
+                        class="bike-portal-logo"
+                    />
+
+                </div>
+
+                <h3 class="mt-4 mb-4 bike-portal-title">
                     My Rentals
                 </h3>
 
@@ -59,6 +93,7 @@
                     <table class="table table-hover">
 
                         <thead>
+
                             <tr>
                                 <th>Reference</th>
                                 <th>Bike</th>
@@ -67,18 +102,26 @@
                                 <th>Status</th>
                                 <th>Total Amount</th>
                             </tr>
+
                         </thead>
 
                         <tbody>
 
-                            <t t-foreach="rentals" t-as="rental">
+                            <t
+                                t-foreach="rentals"
+                                t-as="rental"
+                            >
 
                                 <tr>
 
                                     <td>
-                                        <a t-att-href="'/my/rentals/%s' % rental.id">
+
+                                        <a
+                                            t-att-href="'/my/rentals/%s' % rental.id"
+                                        >
                                             <span t-field="rental.name"/>
                                         </a>
+
                                     </td>
 
                                     <td>
@@ -126,20 +169,35 @@
     </template>
 
 
-    <!-- Rental detail -->
+    <!-- =====================================================
+         Rental Detail
+         ===================================================== -->
 
-    <template id="portal_rental_detail"
-              name="Rental Detail">
+    <template
+        id="portal_rental_detail"
+        name="Rental Detail"
+    >
 
         <t t-call="portal.portal_layout">
 
             <div class="container">
 
-                <h3 class="mt-4 mb-4">
+                <!-- Branding -->
+                <div class="bike-portal-brand text-center mt-4">
+
+                    <img
+                        src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                        alt="Rami's Bike Workshop"
+                        class="bike-portal-logo"
+                    />
+
+                </div>
+
+                <h3 class="mt-4 mb-4 bike-portal-title">
                     Rental Agreement
                 </h3>
 
-                <div class="card">
+                <div class="card bike-portal-card">
 
                     <div class="card-body">
 
@@ -198,8 +256,10 @@
 
                 </div>
 
-                <a href="/my/rentals"
-                   class="btn btn-secondary mt-3">
+                <a
+                    href="/my/rentals"
+                    class="btn btn-secondary mt-3"
+                >
                     Back to My Rentals
                 </a>
 
