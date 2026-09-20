@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <odoo>
 
     <!-- Rental Agreement Report Action -->
@@ -11,15 +10,9 @@
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">bike_management.report_rental_agreement</field>
         <field name="report_file">bike_management.report_rental_agreement</field>
-
-        <field name="binding_model_id"
-               ref="model_bike_rental"/>
-
+        <field name="binding_model_id" ref="model_bike_rental"/>
         <field name="binding_type">report</field>
-
-        <field name="print_report_name">
-            'Rental Agreement - %s' % (object.name)
-        </field>
+        <field name="print_report_name">'Rental Agreement - %s' % (object.name)</field>
 
     </record>
 
@@ -31,10 +24,7 @@
 
             <t t-foreach="docs" t-as="rental">
 
-                <!--
-                    Render the complete report using the customer's
-                    preferred language.
-                -->
+                <!-- Render according to customer's language -->
                 <t t-call="web.external_layout"
                    t-lang="rental.customer_id.lang or 'en_US'">
 
@@ -43,7 +33,13 @@
                         <!-- Header -->
                         <div class="text-center">
 
-                            <h2>Rental Agreement</h2>
+                            <img src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                                 alt="Rami's Bike Workshop"
+                                 style="max-width: 220px; max-height: 100px; object-fit: contain;"/>
+
+                            <h2 style="color: #333333; margin-top: 15px;">
+                                Rental Agreement
+                            </h2>
 
                             <p>
                                 <strong>Rental Reference:</strong>
@@ -52,10 +48,13 @@
 
                         </div>
 
-                        <hr/>
+                        <hr style="border: 0; border-top: 3px solid #84B84F;"/>
+
 
                         <!-- Rental Information -->
-                        <h4>Rental Information</h4>
+                        <h4 style="color: #84B84F;">
+                            Rental Information
+                        </h4>
 
                         <table class="table table-sm">
                             <tbody>
@@ -88,22 +87,18 @@
                                 </tr>
 
                                 <tr t-if="rental.actual_return_date">
-
                                     <td>
                                         <strong>Actual Return Date</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.actual_return_date"/>
                                     </td>
-
                                 </tr>
 
                                 <tr>
                                     <td>
                                         <strong>Rental Duration</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.rental_duration"/>
                                         day(s)
@@ -114,7 +109,6 @@
                                     <td>
                                         <strong>Daily Rental Price</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.daily_price"/>
                                     </td>
@@ -124,9 +118,10 @@
                                     <td>
                                         <strong>Total Rental Amount</strong>
                                     </td>
-
                                     <td>
-                                        <span t-field="rental.total_amount"/>
+                                        <strong style="color: #84B84F;">
+                                            <span t-field="rental.total_amount"/>
+                                        </strong>
                                     </td>
                                 </tr>
 
@@ -135,7 +130,9 @@
 
 
                         <!-- Customer Information -->
-                        <h4>Customer Information</h4>
+                        <h4 style="color: #84B84F;">
+                            Customer Information
+                        </h4>
 
                         <table class="table table-sm">
                             <tbody>
@@ -144,46 +141,36 @@
                                     <td>
                                         <strong>Customer</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.customer_id.name"/>
                                     </td>
                                 </tr>
 
                                 <tr t-if="rental.customer_id.phone">
-
                                     <td>
                                         <strong>Phone</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.customer_id.phone"/>
                                     </td>
-
                                 </tr>
 
                                 <tr t-if="rental.customer_id.email">
-
                                     <td>
                                         <strong>Email</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.customer_id.email"/>
                                     </td>
-
                                 </tr>
 
                                 <tr t-if="rental.customer_id.street">
-
                                     <td>
                                         <strong>Address</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.customer_id.street"/>
                                     </td>
-
                                 </tr>
 
                             </tbody>
@@ -191,7 +178,9 @@
 
 
                         <!-- Bike Information -->
-                        <h4>Bike Information</h4>
+                        <h4 style="color: #84B84F;">
+                            Bike Information
+                        </h4>
 
                         <table class="table table-sm">
                             <tbody>
@@ -200,34 +189,27 @@
                                     <td>
                                         <strong>Bike</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.bike_id.name"/>
                                     </td>
                                 </tr>
 
                                 <tr t-if="rental.bike_id.brand">
-
                                     <td>
                                         <strong>Brand</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.bike_id.brand"/>
                                     </td>
-
                                 </tr>
 
                                 <tr t-if="rental.bike_id.bike_type">
-
                                     <td>
                                         <strong>Bike Type</strong>
                                     </td>
-
                                     <td>
                                         <span t-field="rental.bike_id.bike_type"/>
                                     </td>
-
                                 </tr>
 
                             </tbody>
@@ -244,8 +226,6 @@
 
                         </div>
 
-                        <br/>
-
 
                         <!-- Signatures -->
                         <div class="row mt-5">
@@ -260,7 +240,6 @@
                                 __________________________
 
                             </div>
-
 
                             <div class="col-6 text-center">
 

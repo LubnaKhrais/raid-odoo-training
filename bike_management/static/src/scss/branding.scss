@@ -1,0 +1,224 @@
+/* =========================================================
+   Rami's Bike Workshop Branding
+   ========================================================= */
+
+
+/* =========================================================
+   ODOO MAIN NAVBAR
+   ========================================================= */
+
+.o_main_navbar {
+    background: #333333 !important;
+    background-color: #333333 !important;
+
+    --NavBar-entry-backgroundColor: #333333;
+    --NavBar-entry-backgroundColor--hover: #719F43;
+    --NavBar-entry-backgroundColor--focus: #719F43;
+    --NavBar-entry-backgroundColor--active: #84B84F;
+
+    --NavBar-entry-color: #ffffff;
+    --NavBar-entry-color--active: #ffffff;
+    --NavBar-entry-borderColor-active: #84B84F;
+}
+
+
+/* =========================================================
+   ALL TOP MENU ITEMS
+   ========================================================= */
+
+.o_main_navbar .o_menu_sections .o_nav_entry,
+.o_main_navbar .o_menu_sections .dropdown-toggle {
+    background: #333333 !important;
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+
+/* =========================================================
+   HOVER MENU ITEM
+   ========================================================= */
+
+.o_main_navbar .o_menu_sections .o_nav_entry:hover,
+.o_main_navbar .o_menu_sections .dropdown-toggle:hover {
+    background: #719F43 !important;
+    background-color: #719F43 !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ACTIVE / OPEN MENU ITEM
+   ========================================================= */
+
+.o_main_navbar .o_menu_sections .dropdown.show > .dropdown-toggle,
+.o_main_navbar .o_menu_sections .o_nav_entry.active,
+.o_main_navbar .o_menu_sections .o_nav_entry[aria-current="page"] {
+    background: #84B84F !important;
+    background-color: #84B84F !important;
+    color: #ffffff !important;
+    border-color: #84B84F !important;
+}
+
+
+/* =========================================================
+   MENU TEXT
+   ========================================================= */
+
+.o_main_navbar .o_menu_sections .o_nav_entry *,
+.o_main_navbar .o_menu_sections .dropdown-toggle * {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ODOO APP BRAND / LEFT SIDE
+   ========================================================= */
+
+.o_main_navbar .o_menu_brand {
+    background: #333333 !important;
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+.o_main_navbar .o_menu_brand:hover {
+    background: #333333 !important;
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTONS
+   ========================================================= */
+
+.o_web_client .btn-primary {
+    background-color: #84B84F !important;
+    border-color: #84B84F !important;
+    color: #ffffff !important;
+}
+
+.o_web_client .btn-primary:hover,
+.o_web_client .btn-primary:focus,
+.o_web_client .btn-primary:active {
+    background-color: #719F43 !important;
+    border-color: #719F43 !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.o_web_client a {
+    color: #6FA43D;
+}
+
+.o_web_client a:hover {
+    color: #5C8E35;
+}
+
+
+/* =========================================================
+   FORM HEADINGS
+   ========================================================= */
+
+.o_form_view .oe_title h1,
+.o_form_view h1,
+.o_form_view h2 {
+    color: #333333;
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.bike-dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bike-dashboard-logo {
+    max-width: 240px;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+.bike-dashboard-title {
+    color: #333333;
+    font-weight: 600;
+}
+
+.bike-dashboard-card {
+    border-top: 5px solid #84B84F !important;
+    border-radius: 6px;
+}
+
+.bike-dashboard-card .display-4 {
+    color: #84B84F;
+    font-weight: 600;
+}
+
+.bike-dashboard-card .btn-primary {
+    background-color: #84B84F !important;
+    border-color: #84B84F !important;
+}
+
+
+/* =========================================================
+   CUSTOMER PORTAL
+   ========================================================= */
+
+.bike-portal-brand {
+    border-bottom: 3px solid #84B84F;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.bike-portal-logo {
+    max-width: 220px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.bike-portal-title {
+    color: #333333;
+    font-weight: 600;
+}
+
+.bike-portal-card {
+    border-top: 4px solid #84B84F;
+}
+
+.bike-portal-card .badge {
+    background-color: #84B84F !important;
+}
+
+.bike-portal-card .btn-primary {
+    background-color: #84B84F !important;
+    border-color: #84B84F !important;
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html[dir="rtl"] .bike-portal-brand {
+    text-align: right;
+}
+
+html[dir="rtl"] .bike-portal-card {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .o_main_navbar {
+    direction: rtl;
+}
+
+html[dir="rtl"] .o_web_client {
+    direction: rtl;
+}
