@@ -26,7 +26,7 @@ msgstr ""
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Actual Return Date:</strong>"
-msgstr ""
+msgstr "<strong>تاريخ العودة الفعلي:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -46,7 +46,7 @@ msgstr "<strong>نوع الدراجة</strong>"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Bike:</strong>"
-msgstr ""
+msgstr "<strong>دراجة:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -79,7 +79,7 @@ msgstr "<strong>العميل</strong>"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Daily Rental Price:</strong>"
-msgstr ""
+msgstr "<strong>سعر الإيجار اليومي:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -94,7 +94,7 @@ msgstr "<strong>البريد الإلكتروني</strong>"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Expected Return Date:</strong>"
-msgstr ""
+msgstr "<strong>تاريخ العودة المتوقع:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -109,7 +109,7 @@ msgstr "<strong>الهاتف</strong>"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Rental Duration:</strong>"
-msgstr ""
+msgstr "<strong>مدة الإيجار:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -129,12 +129,12 @@ msgstr "<strong>تاريخ بدء التأجير</strong>"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Start Date:</strong>"
-msgstr ""
+msgstr "<strong>تاريخ البدء:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Status:</strong>"
-msgstr ""
+msgstr "<strong>حالة:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -144,7 +144,7 @@ msgstr "<strong>الحالة</strong>"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "<strong>Total Amount:</strong>"
-msgstr ""
+msgstr "<strong>المبلغ الإجمالي:</strong>"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -191,7 +191,7 @@ msgstr "الميكانيكي المعيّن"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_rental_detail
 msgid "Back to My Rentals"
-msgstr ""
+msgstr "العودة إلى عقاراتي المؤجَّرة"
 
 #. module: bike_management
 #: model:ir.model,name:bike_management.model_bike_management_bike
@@ -360,7 +360,7 @@ msgstr "سعر التأجير اليومي"
 #. odoo-python
 #: code:addons/bike_management/models/rental.py:0
 msgid "Daily rental price cannot be negative."
-msgstr ""
+msgstr "لا يمكن أن تكون قيمة الإيجار اليومي سالبة."
 
 #. module: bike_management
 #: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__display_name
@@ -390,7 +390,7 @@ msgstr "كهربائية"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
 msgid "Expected Return"
-msgstr ""
+msgstr "العائد المتوقع"
 
 #. module: bike_management
 #: model:ir.model.fields,field_description:bike_management.field_bike_rental__expected_return_date
@@ -498,7 +498,7 @@ msgstr "جبلية"
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_my_home_rentals
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
 msgid "My Rentals"
-msgstr ""
+msgstr "عقاراتي المؤجرة"
 
 #. module: bike_management
 #: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__return_performance__on_time
@@ -510,13 +510,13 @@ msgstr "في الموعد"
 #. odoo-python
 #: code:addons/bike_management/models/rental.py:0
 msgid "Only confirmed rentals can be returned."
-msgstr ""
+msgstr "لا يمكن إرجاع سوى عمليات التأجير المؤكدة."
 
 #. module: bike_management
 #. odoo-python
 #: code:addons/bike_management/models/rental.py:0
 msgid "Only draft rentals can be confirmed."
-msgstr ""
+msgstr "يمكن تأكيد حجوزات الإيجار المسجلة كمسودات فقط."
 
 #. module: bike_management
 #: model:ir.model.fields.selection,name:bike_management.selection__bike_rental__return_performance__pending
@@ -528,13 +528,13 @@ msgstr "معلّق"
 #. odoo-python
 #: code:addons/bike_management/models/rental.py:0
 msgid "Please select a bike before confirming the rental."
-msgstr ""
+msgstr "يرجى اختيار دراجة قبل تأكيد الاستئجار."
 
 #. module: bike_management
 #. odoo-python
 #: code:addons/bike_management/models/rental.py:0
 msgid "Please set the rental start date and expected return date."
-msgstr ""
+msgstr "يرجى تحديد تاريخ بدء الإيجار وتاريخ الإعادة المتوقع."
 
 #. module: bike_management
 #: model:ir.model.fields,field_description:bike_management.field_res_partner__preferred_bike_type
@@ -560,7 +560,7 @@ msgstr "الكمية"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
 msgid "Reference"
-msgstr ""
+msgstr "مرجع"
 
 #. module: bike_management
 #: model:ir.actions.report,name:bike_management.action_report_bike_rental_agreement
@@ -600,7 +600,7 @@ msgstr "مدة التأجير"
 #: model:ir.model.fields,field_description:bike_management.field_res_users__rental_ids
 #: model_terms:ir.ui.view,arch_db:bike_management.view_partner_form_bike_management
 msgid "Rental History"
-msgstr ""
+msgstr "سجل الإيجار"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -631,7 +631,7 @@ msgstr "حالة التأجير"
 #. odoo-python
 #: code:addons/bike_management/models/rental.py:0
 msgid "Rental duration cannot be negative."
-msgstr ""
+msgstr "مدة الإيجار لايمكن ان تكون بالسالب"
 
 #. module: bike_management
 #: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__rental_count
@@ -779,7 +779,7 @@ msgstr "لدى هذه الدراجة عملية تأجير متداخلة بال
 #. odoo-python
 #: code:addons/bike_management/models/rental.py:0
 msgid "This bike currently has a repair in progress and cannot be rented."
-msgstr ""
+msgstr "هذه الدراجة قيد الصيانة لا يمكن استئجارها"
 
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
@@ -822,7 +822,7 @@ msgstr "عرض عمليات الإرجاع"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_my_home_rentals
 msgid "View your bike rentals"
-msgstr ""
+msgstr "عرض دراجاتك المستأجرة"
 
 #. module: bike_management
 #: model:ir.model.fields,field_description:bike_management.field_bike_management_bike__wheel_size
@@ -849,7 +849,7 @@ msgstr "لوحة عمليات الورشة"
 #. module: bike_management
 #: model_terms:ir.ui.view,arch_db:bike_management.portal_my_rentals
 msgid "You have no rentals."
-msgstr ""
+msgstr "ليس لديك أي عمليات تأجير."
 
 #. module: bike_management
 #. odoo-python
@@ -862,3 +862,15 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:bike_management.report_rental_agreement
 msgid "day(s)"
 msgstr "يوم/أيام"
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/rental.py:0
+msgid "The expected return date must be after the rental start date."
+msgstr "يجب أن يكون تاريخ الإرجاع المتوقع بعد تاريخ بدء التأجير."
+
+#. module: bike_management
+#. odoo-python
+#: code:addons/bike_management/models/dashboard.py:0
+msgid "Workshop Operations Dashboard"
+msgstr "لوحة عمليات الورشة"

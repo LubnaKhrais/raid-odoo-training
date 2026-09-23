@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- Repair List View -->
     <record id="view_bike_repair_list" model="ir.ui.view">
         <field name="name">bike.repair.list</field>
         <field name="model">bike.repair</field>
@@ -11,7 +12,7 @@
                 <field name="bike_source"/>
                 <field name="bike_id"/>
                 <field name="mechanic_id"/>
-		<field name="last_service_date"/>
+                <field name="last_service_date"/>
                 <field name="total_spare_parts_cost"/>
                 <field name="state"/>
             </list>
@@ -19,6 +20,82 @@
     </record>
 
 
+    <!-- Repair Search View -->
+    <record id="view_bike_repair_search" model="ir.ui.view">
+        <field name="name">bike.repair.search</field>
+        <field name="model">bike.repair</field>
+        <field name="arch" type="xml">
+            <search string="Repair Jobs">
+
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="bike_id"/>
+                <field name="mechanic_id"/>
+                <field name="bike_source"/>
+                <field name="state"/>
+
+                <separator/>
+
+                <filter
+                    name="filter_draft"
+                    string="Draft"
+                    domain="[('state', '=', 'draft')]"
+                />
+
+                <filter
+                    name="filter_in_progress"
+                    string="In Progress"
+                    domain="[('state', '=', 'in_progress')]"
+                />
+
+                <filter
+                    name="filter_completed"
+                    string="Completed"
+                    domain="[('state', '=', 'completed')]"
+                />
+
+                <filter
+                    name="filter_cancelled"
+                    string="Cancelled"
+                    domain="[('state', '=', 'cancelled')]"
+                />
+
+                <separator/>
+
+                <group>
+
+                    <filter
+                        name="group_by_state"
+                        string="Status"
+                        context="{'group_by': 'state'}"
+                    />
+
+                    <filter
+                        name="group_by_customer"
+                        string="Customer"
+                        context="{'group_by': 'customer_id'}"
+                    />
+
+                    <filter
+                        name="group_by_mechanic"
+                        string="Mechanic"
+                        context="{'group_by': 'mechanic_id'}"
+                    />
+
+                    <filter
+                        name="group_by_bike_source"
+                        string="Bike Source"
+                        context="{'group_by': 'bike_source'}"
+                    />
+
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+
+    <!-- Repair Form View -->
     <record id="view_bike_repair_form" model="ir.ui.view">
         <field name="name">bike.repair.form</field>
         <field name="model">bike.repair</field>
@@ -65,7 +142,7 @@
 
                         <group>
                             <field name="mechanic_id"/>
-			    <field name="last_service_date"/>
+                            <field name="last_service_date"/>
                         </group>
 
                     </group>
@@ -130,19 +207,21 @@
     </record>
 
 
+    <!-- Repair Action -->
     <record id="action_bike_repair" model="ir.actions.act_window">
 
         <field name="name">Repair Jobs</field>
         <field name="res_model">bike.repair</field>
         <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_bike_repair_search"/>
 
     </record>
 
 
     <menuitem id="menu_bike_repair_root"
               name="Repair Management"
-	      parent="bike_management.menu_bike_root"
-	      groups="bike_management.group_bike_workshop_staff"
+              parent="bike_management.menu_bike_root"
+              groups="bike_management.group_bike_workshop_staff"
               sequence="20"/>
 
     <menuitem id="menu_bike_repair"

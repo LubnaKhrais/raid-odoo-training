@@ -11,22 +11,6 @@
                 <field name="preferred_bike_type"/>
             </xpath>
 
-            <xpath expr="//notebook" position="inside">
-                <page string="Rental History">
-                    <field name="rental_ids" readonly="1">
-                        <list>
-                            <field name="name"/>
-                            <field name="bike_id"/>
-                            <field name="start_date"/>
-                            <field name="expected_return_date"/>
-                            <field name="actual_return_date"/>
-                            <field name="state"/>
-                            <field name="total_amount"/>
-                        </list>
-                    </field>
-                </page>
-            </xpath>
-
         </field>
     </record>
 

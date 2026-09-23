@@ -22,27 +22,20 @@
                     </div>
 
                     <!-- Dashboard Title -->
-                    <div
-                        class="bike-dashboard-title oe_title"
-                        style="direction: rtl; text-align: right;"
-                    >
+                    <div class="bike-dashboard-title">
                         <h1>
-                            Bike Workshop Operations Dashboard
+                            <span>
+                                Workshop Operations Dashboard
+                            </span>
                         </h1>
                     </div>
 
                     <!-- Dashboard Cards -->
-                    <div
-                        class="row mt16"
-                        style="direction: rtl;"
-                    >
+                    <div class="row mt16">
 
                         <!-- Active Rentals -->
                         <div class="col-4">
-                            <div
-                                class="card text-center bike-dashboard-card"
-                                style="direction: rtl;"
-                            >
+                            <div class="card text-center bike-dashboard-card">
                                 <div class="card-body">
 
                                     <h3>
@@ -70,10 +63,7 @@
 
                         <!-- Returns Due -->
                         <div class="col-4">
-                            <div
-                                class="card text-center bike-dashboard-card"
-                                style="direction: rtl;"
-                            >
+                            <div class="card text-center bike-dashboard-card">
                                 <div class="card-body">
 
                                     <h3>
@@ -101,10 +91,7 @@
 
                         <!-- Repairs -->
                         <div class="col-4">
-                            <div
-                                class="card text-center bike-dashboard-card"
-                                style="direction: rtl;"
-                            >
+                            <div class="card text-center bike-dashboard-card">
                                 <div class="card-body">
 
                                     <h3>
@@ -145,7 +132,7 @@
     >
 
         <field name="name">
-            Workshop Operations Dashboard
+            Workshop Dashboard
         </field>
 
         <field

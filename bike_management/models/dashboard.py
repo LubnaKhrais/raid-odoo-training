@@ -7,32 +7,26 @@ class BikeWorkshopDashboard(models.TransientModel):
 
     name = fields.Char(
         string='Name',
-        compute='_compute_name',
+        default=lambda: _('Workshop Operations Dashboard'),
+        readonly=True,
     )
 
     active_rentals_today = fields.Integer(
         string='Active Rentals Today',
-        compute='_compute_dashboard_counts'
+        compute='_compute_dashboard_counts',
     )
 
     returns_due_today = fields.Integer(
         string='Returns Due Today',
-        compute='_compute_dashboard_counts'
+        compute='_compute_dashboard_counts',
     )
 
     repairs_in_progress = fields.Integer(
         string='Repairs In Progress',
-        compute='_compute_dashboard_counts'
+        compute='_compute_dashboard_counts',
     )
 
-    @api.depends_context('lang')
-    def _compute_name(self):
-        for dashboard in self:
-            if self.env.lang == 'ar_001':
-                dashboard.name = 'لوحة عمليات الورشة'
-            else:
-                dashboard.name = 'Workshop Operations Dashboard'
-
+    @api.depends()
     def _compute_dashboard_counts(self):
         today = fields.Date.today()
         rental_model = self.env['bike.rental']
@@ -62,7 +56,6 @@ class BikeWorkshopDashboard(models.TransientModel):
 
         return {
             'type': 'ir.actions.act_window',
-            'name': _('Workshop Operations Dashboard'),
             'res_model': 'bike.workshop.dashboard',
             'view_mode': 'form',
             'views': [

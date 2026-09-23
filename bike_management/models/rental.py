@@ -7,6 +7,14 @@ class BikeRental(models.Model):
     _description = 'Bike Rental'
     _order = 'start_date desc, id desc'
 
+    _sql_constraints = [
+        (
+            'name_unique',
+            'unique(name)',
+            'Rental reference must be unique.',
+        ),
+    ]
+
     name = fields.Char(
         string='Rental Reference',
         required=True,
@@ -134,13 +142,14 @@ class BikeRental(models.Model):
         if (
             self.start_date
             and self.expected_return_date
-            and self.expected_return_date < self.start_date
+            and self.expected_return_date <= self.start_date
         ):
             return {
                 'warning': {
                     'title': _('Invalid Return Date'),
                     'message': _(
-                        'The expected return date cannot be before the rental start date.'
+                        'The expected return date must be after '
+                        'the rental start date.'
                     ),
                 }
             }
@@ -151,11 +160,12 @@ class BikeRental(models.Model):
             if (
                 rental.start_date
                 and rental.expected_return_date
-                and rental.expected_return_date < rental.start_date
+                and rental.expected_return_date <= rental.start_date
             ):
                 raise ValidationError(
                     _(
-                        'The expected return date cannot be before the rental start date.'
+                        'The expected return date must be after '
+                        'the rental start date.'
                     )
                 )
 
@@ -170,9 +180,17 @@ class BikeRental(models.Model):
     @api.constrains('rental_duration')
     def _check_rental_duration(self):
         for rental in self:
-            if rental.rental_duration < 0:
+            if rental.rental_duration <= 0:
                 raise ValidationError(
-                    _('Rental duration cannot be negative.')
+                    _('Rental duration must be greater than zero.')
+                )
+
+    @api.constrains('total_amount')
+    def _check_total_amount(self):
+        for rental in self:
+            if rental.total_amount < 0:
+                raise ValidationError(
+                    _('Total rental amount cannot be negative.')
                 )
 
     @api.model_create_multi
@@ -206,14 +224,16 @@ class BikeRental(models.Model):
             if not rental.start_date or not rental.expected_return_date:
                 raise UserError(
                     _(
-                        'Please set the rental start date and expected return date.'
+                        'Please set the rental start date and '
+                        'expected return date.'
                     )
                 )
 
-            if rental.expected_return_date < rental.start_date:
+            if rental.expected_return_date <= rental.start_date:
                 raise UserError(
                     _(
-                        'The expected return date cannot be before the rental start date.'
+                        'The expected return date must be after '
+                        'the rental start date.'
                     )
                 )
 
@@ -228,7 +248,8 @@ class BikeRental(models.Model):
             if repair_in_progress:
                 raise UserError(
                     _(
-                        'This bike currently has a repair in progress and cannot be rented.'
+                        'This bike currently has a repair in progress '
+                        'and cannot be rented.'
                     )
                 )
 
@@ -236,11 +257,9 @@ class BikeRental(models.Model):
                 [
                     ('id', '!=', rental.id),
                     ('bike_id', '=', rental.bike_id.id),
-                    ('state', 'in', ['confirmed', 'returned']),
+                    ('state', '=', 'confirmed'),
                     ('start_date', '<=', rental.expected_return_date),
-                    '|',
-                    ('actual_return_date', '=', False),
-                    ('actual_return_date', '>=', rental.start_date),
+                    ('expected_return_date', '>=', rental.start_date),
                 ],
                 limit=1,
             )

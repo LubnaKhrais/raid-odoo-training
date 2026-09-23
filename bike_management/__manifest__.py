@@ -26,7 +26,6 @@
 
     'assets': {
         'web.assets_backend': [
-            'bike_management/static/src/scss/rtl.scss',
             'bike_management/static/src/scss/branding.scss',
         ],
         'web.assets_frontend': [
@@ -37,12 +36,15 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        'views/rtl_views.xml',
+
         'views/bike_views.xml',
         'views/repair_views.xml',
         'views/partner_views.xml',
+
         'data.xml',
+
         'report/rental_report.xml',
+
         'views/product_views.xml',
         'views/dashboard_views.xml',
         'views/portal_templates.xml',
