@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_partner_form_bike_management"
-            model="ir.ui.view">
-
+    <record id="view_partner_form_bike_management" model="ir.ui.view">
         <field name="name">res.partner.form.bike.management</field>
-
         <field name="model">res.partner</field>
-
-        <field name="inherit_id"
-               ref="base.view_partner_form"/>
-
+        <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
 
-            <xpath expr="//field[@name='category_id']"
-                   position="after">
-
+            <xpath expr="//field[@name='category_id']" position="after">
                 <field name="preferred_bike_type"/>
-
             </xpath>
 
         </field>
-
     </record>
 
 </odoo>

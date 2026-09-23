@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- =====================================================
+         My Rentals entry on Portal home
+         ===================================================== -->
+
+    <template
+        id="portal_my_home_rentals"
+        inherit_id="portal.portal_my_home"
+    >
+
+        <xpath
+            expr="//div[contains(@class, 'o_portal_docs')]"
+            position="inside"
+        >
+
+            <div class="o_portal_docs_entry col-12 col-md-6 col-lg-4 mb-3">
+
+                <a
+                    href="/my/rentals"
+                    class="text-decoration-none"
+                >
+
+                    <div class="card h-100 bike-portal-card">
+
+                        <div class="card-body">
+
+                            <div class="text-center mb-3">
+                                <img
+                                    src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                                    alt="Rami's Bike Workshop"
+                                    class="bike-portal-logo"
+                                />
+                            </div>
+
+                            <h5 class="card-title">
+                                My Rentals
+                            </h5>
+
+                            <p class="card-text">
+                                View your bike rentals
+                            </p>
+
+                            <span class="badge bg-primary">
+                                <t t-esc="rental_count"/>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </xpath>
+
+    </template>
+
+
+    <!-- =====================================================
+         Rental List
+         ===================================================== -->
+
+    <template
+        id="portal_my_rentals"
+        name="My Rentals"
+    >
+
+        <t t-call="portal.portal_layout">
+
+            <div class="container">
+
+                <!-- Branding -->
+                <div class="bike-portal-brand text-center mt-4">
+
+                    <img
+                        src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                        alt="Rami's Bike Workshop"
+                        class="bike-portal-logo"
+                    />
+
+                </div>
+
+                <h3 class="mt-4 mb-4 bike-portal-title">
+                    My Rentals
+                </h3>
+
+                <t t-if="rentals">
+
+                    <table class="table table-hover">
+
+                        <thead>
+
+                            <tr>
+                                <th>Reference</th>
+                                <th>Bike</th>
+                                <th>Start Date</th>
+                                <th>Expected Return</th>
+                                <th>Status</th>
+                                <th>Total Amount</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <t
+                                t-foreach="rentals"
+                                t-as="rental"
+                            >
+
+                                <tr>
+
+                                    <td>
+
+                                        <a
+                                            t-att-href="'/my/rentals/%s' % rental.id"
+                                        >
+                                            <span t-field="rental.name"/>
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+                                        <span t-field="rental.bike_id.name"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-field="rental.start_date"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-field="rental.expected_return_date"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-field="rental.state"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-field="rental.total_amount"/>
+                                    </td>
+
+                                </tr>
+
+                            </t>
+
+                        </tbody>
+
+                    </table>
+
+                </t>
+
+                <t t-else="">
+
+                    <p>
+                        You have no rentals.
+                    </p>
+
+                </t>
+
+            </div>
+
+        </t>
+
+    </template>
+
+
+    <!-- =====================================================
+         Rental Detail
+         ===================================================== -->
+
+    <template
+        id="portal_rental_detail"
+        name="Rental Detail"
+    >
+
+        <t t-call="portal.portal_layout">
+
+            <div class="container">
+
+                <!-- Branding -->
+                <div class="bike-portal-brand text-center mt-4">
+
+                    <img
+                        src="/bike_management/static/src/img/rami_bike_workshop_logo.png"
+                        alt="Rami's Bike Workshop"
+                        class="bike-portal-logo"
+                    />
+
+                </div>
+
+                <h3 class="mt-4 mb-4 bike-portal-title">
+                    Rental Agreement
+                </h3>
+
+                <div class="card bike-portal-card">
+
+                    <div class="card-body">
+
+                        <h4>
+                            <span t-field="rental.name"/>
+                        </h4>
+
+                        <hr/>
+
+                        <p>
+                            <strong>Bike:</strong>
+                            <span t-field="rental.bike_id.name"/>
+                        </p>
+
+                        <p>
+                            <strong>Start Date:</strong>
+                            <span t-field="rental.start_date"/>
+                        </p>
+
+                        <p>
+                            <strong>Expected Return Date:</strong>
+                            <span t-field="rental.expected_return_date"/>
+                        </p>
+
+                        <t t-if="rental.actual_return_date">
+
+                            <p>
+                                <strong>Actual Return Date:</strong>
+                                <span t-field="rental.actual_return_date"/>
+                            </p>
+
+                        </t>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <span t-field="rental.state"/>
+                        </p>
+
+                        <p>
+                            <strong>Rental Duration:</strong>
+                            <span t-field="rental.rental_duration"/>
+                            day(s)
+                        </p>
+
+                        <p>
+                            <strong>Daily Rental Price:</strong>
+                            <span t-field="rental.daily_price"/>
+                        </p>
+
+                        <p>
+                            <strong>Total Amount:</strong>
+                            <span t-field="rental.total_amount"/>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="/my/rentals"
+                    class="btn btn-secondary mt-3"
+                >
+                    Back to My Rentals
+                </a>
+
+            </div>
+
+        </t>
+
+    </template>
+
+</odoo>

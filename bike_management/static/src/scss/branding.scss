@@ -1,0 +1,167 @@
+/* =========================================================
+   Rami's Bike Workshop - Branding
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Main Odoo Navbar
+   --------------------------------------------------------- */
+
+.o_main_navbar {
+    background: #333333 !important;
+    background-color: #333333 !important;
+
+    --NavBar-entry-backgroundColor: #333333;
+    --NavBar-entry-backgroundColor--hover: #719F43;
+    --NavBar-entry-backgroundColor--focus: #719F43;
+    --NavBar-entry-backgroundColor--active: #84B84F;
+
+    --NavBar-entry-color: #ffffff;
+    --NavBar-entry-color--active: #ffffff;
+    --NavBar-entry-borderColor-active: #84B84F;
+}
+
+
+/* ---------------------------------------------------------
+   Navbar Menu Entries
+   --------------------------------------------------------- */
+
+.o_main_navbar .o_menu_sections .o_nav_entry,
+.o_main_navbar .o_menu_sections .dropdown-toggle {
+    background: #333333 !important;
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+.o_main_navbar .o_menu_sections .o_nav_entry:hover,
+.o_main_navbar .o_menu_sections .dropdown-toggle:hover {
+    background: #719F43 !important;
+    background-color: #719F43 !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   Primary Buttons
+   --------------------------------------------------------- */
+
+.o_web_client .btn-primary:not(.o_form_button_save) {
+    background-color: #719F43 !important;
+    border-color: #719F43 !important;
+    color: #ffffff !important;
+}
+
+.o_web_client .btn-primary:not(.o_form_button_save):hover {
+    background-color: #84B84F !important;
+    border-color: #84B84F !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   New / Create Button
+   --------------------------------------------------------- */
+
+.o_web_client .o_form_button_create {
+    background-color: #719F43 !important;
+    border-color: #719F43 !important;
+    color: #ffffff !important;
+}
+
+.o_web_client .o_form_button_create:hover {
+    background-color: #84B84F !important;
+    border-color: #84B84F !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   Save / Update Button
+   --------------------------------------------------------- */
+
+.o_web_client .o_form_button_save {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: #84B84F !important;
+}
+
+.o_web_client .o_form_button_save:hover {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: #84B84F !important;
+}
+
+
+/* ---------------------------------------------------------
+   Rental Smart Button
+   --------------------------------------------------------- */
+
+.o_web_client .o-form-buttonbox .oe_stat_button {
+    --o-stat-button-color: #719F43 !important;
+    --o-stat-text-color: #719F43 !important;
+}
+
+
+/* Smart button hover */
+
+.o_web_client .o-form-buttonbox .oe_stat_button:hover {
+    --o-stat-button-color: #ffffff !important;
+    --o-stat-text-color: #ffffff !important;
+
+    background-color: #84B84F !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   Dashboard Branding
+   --------------------------------------------------------- */
+
+.bike-dashboard-header {
+    width: 100%;
+    text-align: center !important;
+    margin-bottom: 20px;
+}
+
+.bike-dashboard-logo {
+    max-width: 220px;
+    height: auto;
+}
+
+.bike-dashboard-title {
+    width: 100%;
+    text-align: center !important;
+    color: #333333;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bike-dashboard-title h1 {
+    width: 100%;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.bike-dashboard-title h1 span {
+    display: block;
+    width: 100%;
+    text-align: center !important;
+}
+
+.bike-dashboard-card {
+    border-top: 4px solid #84B84F;
+}
+
+.bike-dashboard-card .display-4 {
+    color: #719F43;
+}
+
+
+/* ---------------------------------------------------------
+   General Workshop Branding
+   --------------------------------------------------------- */
+
+.o_web_client {
+    --o-brand-primary: #719F43;
+}

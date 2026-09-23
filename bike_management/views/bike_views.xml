@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
 
     <!-- Bike List View -->
@@ -15,7 +14,44 @@
                 <field name="last_maintenance_date"/>
                 <field name="daily_rental_price"/>
                 <field name="wheel_size"/>
+                <field name="rental_count"/>
             </list>
+        </field>
+    </record>
+
+
+    <!-- Bike Search View -->
+    <record id="view_bike_search" model="ir.ui.view">
+        <field name="name">bike.management.bike.search</field>
+        <field name="model">bike.management.bike</field>
+        <field name="arch" type="xml">
+            <search string="Bikes">
+
+                <field name="name"/>
+                <field name="brand"/>
+                <field name="bike_type"/>
+                <field name="purchase_date"/>
+                <field name="last_maintenance_date"/>
+
+                <separator/>
+
+                <group>
+
+                    <filter
+                        name="group_by_bike_type"
+                        string="Bike Type"
+                        context="{'group_by': 'bike_type'}"
+                    />
+
+                    <filter
+                        name="group_by_brand"
+                        string="Brand"
+                        context="{'group_by': 'brand'}"
+                    />
+
+                </group>
+
+            </search>
         </field>
     </record>
 
@@ -28,43 +64,36 @@
             <form string="Bike">
                 <sheet>
 
-			<div class="oe_button_box" name="button_box">
-
-			    <button
-			        name="action_view_rentals"
-			        type="object"
-			        class="oe_stat_button"
-			        icon="fa-calendar"
-			    >
-			        <field
-			            name="rental_count"
-			            widget="statinfo"
-			            string="Rentals"
-			        />
-			    </button>
-
-			</div>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_rentals"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-motorcycle">
+                            <field name="rental_count"
+                                   widget="statinfo"
+                                   string="Rentals"/>
+                        </button>
+                    </div>
 
                     <group>
                         <group>
                             <field name="name"/>
                             <field name="brand"/>
                             <field name="bike_type"/>
+                            <field name="wheel_size"/>
                         </group>
 
                         <group>
                             <field name="purchase_date"/>
                             <field name="last_maintenance_date"/>
+                            <field name="daily_rental_price"/>
                         </group>
                     </group>
-			<group string="Service Information">
-			    <field name="mechanic_id"/>
-			    <field name="last_service_date"/>
-			    <field name="service_notes"/>
-			</group>
-                    <group string="Rental Information">
-                        <field name="daily_rental_price"/>
-                        <field name="wheel_size"/>
+
+                    <group string="Service Information">
+                        <field name="mechanic_id"/>
+                        <field name="last_service_date"/>
+                        <field name="service_notes"/>
                     </group>
 
                 </sheet>
@@ -74,29 +103,27 @@
 
 
     <!-- Bike Action -->
-    <record id="action_bike" model="ir.actions.act_window">
+    <record id="action_bike_management_bike" model="ir.actions.act_window">
         <field name="name">Bikes</field>
         <field name="res_model">bike.management.bike</field>
         <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_bike_search"/>
     </record>
 
 
-    <!-- Main Menu -->
-    <menuitem
-        id="menu_bike_root"
-        name="Bike Management"
-        sequence="10"
-        groups="bike_management.group_bike_workshop_staff"
-    />
+    <!-- Main Bike Management Menu -->
+    <menuitem id="menu_bike_root"
+              name="Bike Management"
+              groups="bike_management.group_bike_workshop_staff"
+              sequence="10"/>
+
 
     <!-- Bikes Menu -->
-    <menuitem
-        id="menu_bikes"
-        name="Bikes"
-        parent="menu_bike_root"
-        action="action_bike"
-        sequence="10"
-        groups="bike_management.group_bike_workshop_staff"
-    />
+    <menuitem id="menu_bike_management_bikes"
+              name="Bikes"
+              parent="menu_bike_root"
+              action="action_bike_management_bike"
+              groups="bike_management.group_bike_workshop_staff"
+              sequence="1"/>
 
 </odoo>
